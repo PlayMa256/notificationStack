@@ -1,0 +1,8 @@
+@import '../../containers/App/styles/variables.scss';
+.notificationList{
+  z-index: 9999;
+  position: fixed;
+  top: calc($header-height + 4px);
+  left: 50%;
+  transform: translate(-50%, 0px);
+}

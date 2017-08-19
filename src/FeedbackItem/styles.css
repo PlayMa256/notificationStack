@@ -1,0 +1,88 @@
+@import '../../containers/App/styles/variables.scss';
+
+.feedbackItem {
+  width: 305px;
+  position: relative;
+  top: -1000px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.35);
+  background-color: $solid-white;
+  padding: 12px;
+  margin-bottom: 5px;
+  transition: 0.5s cubic-bezier(0.89, 0.01, 0.5, 1.1);
+  transform: translateZ(0);
+
+  /* font */
+  .notificationText {
+    font-size: 12px;
+    font-weight: bold;
+  }
+
+  .actionButtons {
+    > span {
+      float: right;
+    }
+  }
+
+  &:hover {
+    background-color: $gallery;
+  }
+}
+
+.narrowFeedbackItem {
+  @extend .feedbackItem;
+  padding: 2px 12px;
+}
+
+$large-feedback-width: 385px;
+.largeFeedbackItem {
+  @extend .feedbackItem;
+  width: $large-feedback-width;
+}
+
+@keyframes fillBar {
+  from {background-size: 0% 100%;}
+  to {background-size: 100% 100%;}
+}
+
+.redirectFeedbackItem {
+  @extend .feedbackItem;
+  padding: 2px 12px;
+  width: $large-feedback-width;
+  background-image: linear-gradient(to left, $pot-pourri, $pot-pourri 100%, transparent 0%, transparent 100%);
+  background-image: -webkit-linear-gradient(to left, $pot-pourri, $pot-pourri 100%, transparent 0%, transparent 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  animation-name: fillBar;
+  animation-timing-function: linear;
+
+  .actionButtons {
+    padding-left: 10px;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+.isActive {
+  top: 0;
+}
+
+.disapear {
+  top: -1000px;
+}
+
+.good {
+  color: $jungle-green;
+  border: solid 1px $jungle-green;
+}
+
+.neutral {
+  color: $lynch;
+  border: solid 1px $lynch;
+}
+
+.bad {
+  color: $mojo;
+  border: solid 1px $mojo;
+}

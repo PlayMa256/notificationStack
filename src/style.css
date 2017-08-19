@@ -1,0 +1,59 @@
+.feedbackItem, .narrowFeedbackItem {
+  width: 305px;
+  position: relative;
+  top: -1000px;
+  border-radius: 10px;
+  box-shadow: 0px 1px 1px 0 rgba(0, 0, 0, 0.35);
+  background-color: #FFF;
+  padding: 12px;
+  margin-bottom: 5px;
+  transition: 0.5s cubic-bezier(0.89, 0.01, 0.5, 1.1);
+  transform: translateZ(0);
+  /* font */
+}
+.feedbackItem .notificationText, .narrowFeedbackItem .notificationText {
+  font-size: 12px;
+  font-weight: bold;
+}
+.feedbackItem .actionButtons > span, .narrowFeedbackItem .actionButtons > span {
+  float: right;
+}
+.feedbackItem:hover, .narrowFeedbackItem:hover {
+  background-color: #FFF;
+}
+
+.narrowFeedbackItem {
+  padding: 2px 12px;
+}
+
+.isActive {
+  top: 0;
+}
+
+.disapear {
+  top: -1000px;
+}
+
+.good {
+  color: #FFF;
+  border: solid 1px #FFF;
+}
+
+.neutral {
+  color: #FFF;
+  border: solid 1px #FFF;
+}
+
+.bad {
+  color: #FFF;
+  border: solid 1px #FFF;
+}
+
+
+.notificationList{
+  z-index: 9999;
+  position: fixed;
+  top: calc($header-height + 4px);
+  left: 50%;
+  transform: translate(-50%, 0px);
+}
