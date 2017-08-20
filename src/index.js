@@ -6,14 +6,14 @@ import { createStore } from 'redux'
 import app from './reducers'
 import NotificationItem from './NotificationItem'
 import 'bootstrap/dist/css/bootstrap.min.css'
+import AppComponent from './AppComponent'
 let store = createStore(app)
 
 
 class App extends Component {
-
   render() {
     return (
-      <NotificationItem />
+      <AppComponent />
     );
   }
 }

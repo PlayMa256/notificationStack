@@ -114,22 +114,14 @@ class NotificationItem extends React.PureComponent {
 
   renderFeedbackItem(config) {
     const message = this.props.notification.message
-
     return (
-      <div
-        className={`
-          notificationItem
-          ${config.feedbackMainClass}
-          ${this.getFeedbackClass()}
-          ${this.state.isActive ? localStyle.isActive : localStyle.disapear}
-        `}
-        ref={this.saveFeedbackItemRef}
+      <div className={` notificationItem ${this.getFeedbackClass()} ${this.state.isActive ? localStyle.isActive : localStyle.disapear}`}
       >
         <div className={'row'}>
-          <div className={`${config.messageClass} ${localStyle.notificationText}`}>
+          <div className={`${localStyle.notificationText}`}>
             {message}
           </div>
-          <div className={`${config.actionBtnsClass} ${localStyle.actionButtons}`}>
+          <div className={`${localStyle.actionButtons}`}>
             {
               config.actionBtns.map((button, index) => {
                 return <span key={index}>{button}</span>
@@ -153,25 +145,8 @@ class NotificationItem extends React.PureComponent {
   }
 
   render() {
-    return (
-      <div
-        className={`
-          notificationItem
-          ${localStyle.feedbackItem}
-          ${localStyle.neutral}
-        `}
-        ref={this.saveFeedbackItemRef}
-      >
-        <div className={'row'}>
-          <div className={`${localStyle.notificationText}`}>
-            asdsaddas
-          </div>
-          <div className={`${localStyle.actionButtons}`}>
-            
-          </div>
-        </div>
-      </div>
-    )
+    console.log(this.props);
+    return null;
   }
 }
 
